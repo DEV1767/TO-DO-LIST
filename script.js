@@ -1,3 +1,4 @@
+
 const input =document.getElementById("name")
 const workinfo =document.getElementById("workinfo")
 input.addEventListener("input",function(){
@@ -37,11 +38,39 @@ input.addEventListener("input",function(){
  }})
  function savedata()
 {
-    localStorage.setItem("data",workinfo.innerHTML)
-
+    const data = [];
+    const items = workinfo.querySelectorAll("li");
+    items.forEach(li => {
+        const text = li.childNodes[0].nodeValue.trim();
+        const checked = li.classList.contains("checked");
+        data.push({ text, checked });
+    });
+    localStorage.setItem("data", JSON.stringify(data));
 }
-function showtask(){
-    workinfo.innerHTML=localStorage.getItem("data")
 
+
+function showtask(){
+
+    const data = JSON.parse(localStorage.getItem("data")) || [];
+    workinfo.innerHTML = "";
+    data.forEach(item => {
+        let li = document.createElement("li");
+        li.innerHTML = item.text;
+
+        let span = document.createElement("span");
+        span.innerHTML = "\u00d7";
+        li.appendChild(span);
+
+        let checkbox = document.createElement("input");
+        checkbox.type = "checkbox";
+        checkbox.classList.add("check");
+        checkbox.checked = item.checked;
+        if (item.checked) {
+            li.classList.add("checked");
+        }
+        li.appendChild(checkbox);
+
+        workinfo.appendChild(li);
+    });
 }
 showtask()
