@@ -5,12 +5,12 @@ input.addEventListener("input",function(){
     const word=this.value.trim().split(/\s+/)
      if(word.length>30){
         this.value=word.slice(0,40).join(" ")
-        alert("Only 40 word allowed!")
+        alert("Only 30 word allowed!")
      }
 })
  function add(){
     if (input.value ===''){
-        alert("ADD SOME TASk")
+        alert("ADD SOME TASK")
     }
     else{
         let li=document.createElement("li")
