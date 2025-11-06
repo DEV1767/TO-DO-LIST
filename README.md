@@ -2,7 +2,7 @@
 
 A simple and responsive **To-Do List** web application to help you stay organized and manage your daily tasks efficiently.
 
-🔗 **Live Demo**: [Click to View](https://dev1767.github.io/TO-DO-LIST)
+🔗 **Live Demo**: [Click to View](https://shivamto-do.netlify.app/)
 
 ---
 
