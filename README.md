@@ -26,15 +26,8 @@ A simple and responsive **To-Do List** web application to help you stay organize
 
 ## 📁 Project Structure
 
-```bash
-📁 TO-DO-LIST/
-├── index.html        # Main webpage
-├── style.css         # Styling for the to-do app
-├── script.js         # JavaScript logic (add, delete, complete tasks)
-├── README.md         # Project documentation
-login
 
 🙋‍♂️ Author
-Developed by @DEV1767
-📧 Email:p622133@gmail.com
+Developed by SHIVAM
+
 
